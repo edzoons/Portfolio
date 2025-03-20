@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datorika līdz šim</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #ddd;
+        }
+        .navbar {
+            background-color: #222;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .segment {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 80px auto;
+            background-color: #252525;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .segment.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .image-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Info</a>
+        <a href="#GIMP">GIMP</a>
+        <a href="#project">Grupu projekts</a>
+        <a href="#video">Video</a>
+        <a href="#content">Word/Excel</a>
+		<a href="atsauksmes.html">Atsauksmes</a>
+    </div>
+
+    <div class="segment" id="home">
+        <h1>Mūsu datorikas darbi</h1>
+        <p>Ko mēs esam darījuši līdz šim? Mēs esam veidojuši dažādus projektus...</p>
+        <ul>
+            <li>GIMP</li>
+            <li>Grupu projekts (Rastrgrafika, 3D modelēšana)</li>
+            <li>Video</li>
+            <li>Word/Excel</li>
+        </ul>
+    </div>
+
+    <div class="segment" id="GIMP">
+        <h2>GIMP</h2>
+        <p>Es iemācījos ar GIMP rediģēt bildes, pielietot dažādus efektus kā arī veidot nelielas animācijas</p>
+        <div class="image-placeholder">Šeit būs bilde</div>
+    </div>
+
+    <div class="segment" id="project">
+        <h2>Grupu projekts</h2>
+        <p>Grupas projekts ar 3D modelēšanu, lika apgūt dažādas zināšanas, kā arī prasmes. Iemācījos uzdizainēt savu logo, pārveidot to 3d formātā un beigās to izprintēt puzles gabalos.</p>
+        <div class="image-placeholder">Šeit būs bilde</div>
+    </div>
+
+    <div class="segment" id="video">
+        <h2>Video</h2>
+        <p>Ar video montēšanu man jau ir bijusi pieredze, bet jauns man bija reklāmas ievietoša, īpaši tās veidošana powerpointā.</p>
+        <div class="image-placeholder">Šeit būs video</div>
+    </div>
+
+    <div class="segment" id="content">
+        <h2>MS Word/MS Excel</h2>
+        <p>Ar excel var mācīties visu laiku, ir lietas ko aizmirstu, neteiktu, ka daudz jauna iemācījos, bet noteikti atkārtoju zināšanas. Ar word strāda'ju skolā katru gadu, ir dažas lietas ko apgūt, bet lielākā daļa ir skaidra.</p>
+        <div class="image-placeholder">Šeit būs bilde</div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let segments = document.querySelectorAll(".segment");
+            function showOnScroll() {
+                segments.forEach(segment => {
+                    let position = segment.getBoundingClientRect().top;
+                    if (position < window.innerHeight - 100) {
+                        segment.classList.add("show");
+                    }
+                });
+            }
+            window.addEventListener("scroll", showOnScroll);
+            showOnScroll();
+        });
+    </script>
+</body>
+</html>
