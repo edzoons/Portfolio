@@ -59,6 +59,20 @@
             font-size: 20px;
             border-radius: 10px;
         }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 400px;
+            background-color: black;
+            overflow: hidden;
+        }
+        .video-container video {
+            height: 100%;
+            width: auto;
+            max-width: none;
+        }
     </style>
 </head>
 <body>
@@ -95,17 +109,18 @@
     </div>
 
     <div class="segment" id="video">
-        <h2>Video
-	</h2>
+        <h2>Video</h2>
         <p>Ar video montēšanu man jau ir bijusi pieredze, bet jauns man bija reklāmas ievietoša, īpaši tās veidošana powerpointā.</p>
-        <div class="image-placeholder"><video width="1000" controls height="400">
-    <source src="video.mp4" type="video/mp4">
-	</video></div>
+        <div class="video-container">
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
 
     <div class="segment" id="content">
         <h2>MS Word/MS Excel</h2>
-        <p>Ar excel var mācīties visu laiku, ir lietas ko aizmirstu, neteiktu, ka daudz jauna iemācījos, bet noteikti atkārtoju zināšanas. Ar word strāda'ju skolā katru gadu, ir dažas lietas ko apgūt, bet lielākā daļa ir skaidra.</p>
+        <p>Ar excel var mācīties visu laiku, ir lietas ko aizmirstu, neteiktu, ka daudz jauna iemācījos, bet noteikti atkārtoju zināšanas. Ar word strādāju skolā katru gadu, ir dažas lietas ko apgūt, bet lielākā daļa ir skaidra.</p>
         <div class="image-placeholder">Šeit būs bilde</div>
     </div>
 
@@ -126,3 +141,4 @@
     </script>
 </body>
 </html>
+
