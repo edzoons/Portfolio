@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<title>Rīgas Valsts 1. ģimnāzija</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Verdana', sans-serif;
+  background-color: #e6e6e6;
+  color: #333;
+}
+
+header {
+  background-color: #4A90E2;
+  padding: 25px;
+  text-align: center;
+  font-size: 34px;
+  color: white;
+  font-weight: bold;
+}
+
+section {
+  display: flex;
+  margin: 15px;
+}
+
+nav {
+  flex: 1;
+  background: #999;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  margin-bottom: 8px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #222;
+}
+
+nav a:hover {
+  color: #0056b3;
+}
+
+nav h4 {
+  color: #fff;
+}
+
+article {
+  flex: 3;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #333;
+  padding: 12px;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  section {
+    flex-direction: column;
+  }
+}
+
+nav {
+  background: url('images/skola.jpg') repeat center;
+  background-size: cover;
+}
+
+img {
+  filter: opacity(80%);
+  transition: 0.3s;
+}
+
+img:hover {
+  filter: grayscale(50%) opacity(100%);
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Rīgas Valsts 1. ģimnāzija</h2>
+</header>
+
+<section>
+  <nav>
+    <h4>Satura rādītājs</h4>
+    <ul>
+      <li><a href="#vesture">1. Vēsture</a></li>
+      <li><a href="#nosaukumi">2. Nosaukumu maiņas</a></li>
+      <li><a href="#vaditaji">3. Skolas vadītāji</a></li>
+      <li><a href="#absolventi">4. Absolventi</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h2 id="vesture">1. Vēsture</h2>
+    <p>Rīgas Valsts 1. ģimnāzija (RV1Ģ) ir viena no vecākajām skolām Latvijā, piedāvājot padziļinātu matemātikas un valodu apguvi. Skola ir starptautiskās izglītības programmas dalībniece.</p>
+    <p>Skolas pirmsākumi meklējami 1211. gadā, kad bīskaps Alberts izveidoja pirmo izglītības iestādi pie Svētās Marijas katedrāles.</p>
+
+    <h2 id="nosaukumi">2. Skolas nosaukumu maiņas</h2>
+    <ul>
+      <li>1211—1528: Klostera skola</li>
+      <li>1528—1631: Rīgas Domskola</li>
+      <li>1631—1710: Akadēmiskā ģimnāzija</li>
+      <li>1711—1804: Rīgas Domskola</li>
+      <li>1896—1919: Valsts ģimnāzija</li>
+      <li>1996—pašlaik: Rīgas Valsts 1. ģimnāzija</li>
+    </ul>
+
+    <h2 id="vaditaji">3. Zināmie vadītāji (1229—1804)</h2>
+    <table border="1" width="100%">
+      <tr>
+        <th>Gads</th>
+        <th>Vadītājs</th>
+      </tr>
+      <tr>
+        <td>ap 1239</td>
+        <td>Kanoniķis Heinrihs</td>
+      </tr>
+      <tr>
+        <td>1528—1538</td>
+        <td>Jakobs Batuss</td>
+      </tr>
+      <tr>
+        <td>1538—1554</td>
+        <td>Retgers Pistorijs</td>
+      </tr>
+      <tr>
+        <td>1579—1589</td>
+        <td>Heinrihs Mellers</td>
+      </tr>
+      <tr>
+        <td>1755—1765</td>
+        <td>Johans Gothelfs Lindners</td>
+      </tr>
+      <tr>
+        <td>1780—1787</td>
+        <td>Karlis Filips Mihaels Snells</td>
+      </tr>
+      <tr>
+        <td>1788—1804</td>
+        <td>Kārlis Gotlobs Zontāgs</td>
+      </tr>
+    </table>
+    
+    <h2 id="absolventi">4. Skolas absolventi</h2>
+    <p>Starp skolas absolventiem ir daudzi ievērojami Latvijas zinātnieki un mākslinieki, piemēram, Nobela prēmijas laureāts Vilhelms Ostvalds.</p>
+    <p>Rainis (Jānis Pliekšāns) bija ievērojams latviešu dzejnieks un politiķis. Viņš studēja jurisprudenci un aktīvi piedalījās literatūras attīstībā.</p>
+
+    <p>Vairāk informācijas: <a href="https://www.letonika.lv/literatura/Section.aspx?id=2189826" target="_blank">Letonika.lv</a>.</p>
+  </article>
+</section>
+
+<footer>
+  <a href="https://www.r1g.edu.lv/" target="_blank">
+    <img src="images/logo.png" alt="Rīgas Valsts 1. ģimnāzijas logo" style="height: 100px;">
+  </a>
+</footer>
+
+</body>
+</html>
