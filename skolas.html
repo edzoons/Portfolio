@@ -7,73 +7,46 @@
 <style>
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
-  font-family: 'Verdana', sans-serif;
-  background-color: #e6e6e6;
-  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-  background-color: #4A90E2;
-  padding: 25px;
+  background-color: #666;
+  padding: 30px;
   text-align: center;
-  font-size: 34px;
+  font-size: 35px;
   color: white;
-  font-weight: bold;
 }
 
 section {
   display: flex;
-  margin: 15px;
 }
 
 nav {
   flex: 1;
-  background: #999;
-  padding: 15px;
-  border-radius: 8px;
+  background: #ccc;
+  padding: 20px;
 }
 
 nav ul {
   list-style-type: none;
-}
-
-nav li {
-  margin-bottom: 8px;
-}
-
-nav a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #222;
-}
-
-nav a:hover {
-  color: #0056b3;
-}
-
-nav h4 {
-  color: #fff;
+  padding: 0;
 }
 
 article {
   flex: 3;
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f1f1f1;
+  padding: 10px;
 }
 
 footer {
-  background-color: #333;
-  padding: 12px;
+  background-color: #777;
+  padding: 10px;
   text-align: center;
   color: white;
-  margin-top: 20px;
 }
 
 @media (max-width: 600px) {
@@ -81,20 +54,26 @@ footer {
     flex-direction: column;
   }
 }
-
 nav {
-  background: url('images/skola.jpg') repeat center;
-  background-size: cover;
+  background: url('images/skola.jpg') repeat center center; 
+  background-size: contain; 
 }
 
 img {
-  filter: opacity(80%);
-  transition: 0.3s;
+  filter: opacity(70%);
+}
+
+nav a {
+  color: white !important;
+}
+nav h3 {
+  color: white;
 }
 
 img:hover {
-  filter: grayscale(50%) opacity(100%);
+  opacity: 1; 
 }
+
 
 </style>
 </head>
@@ -106,34 +85,43 @@ img:hover {
 
 <section>
   <nav>
-    <h4>Satura rādītājs</h4>
+    <h3>Satura rādītājs</h3>
     <ul>
       <li><a href="#vesture">1. Vēsture</a></li>
-      <li><a href="#nosaukumi">2. Nosaukumu maiņas</a></li>
-      <li><a href="#vaditaji">3. Skolas vadītāji</a></li>
-      <li><a href="#absolventi">4. Absolventi</a></li>
+      <li><a href="#nosaukumu-maina">2. Skolas nosaukumu maiņas</a></li>
+      <li><a href="#vaditaji">3. Zināmie skolas vadītāji (1229—1804)</a></li>
+      <li><a href="#absolventi">4. Skolas absolventi</a></li>
     </ul>
   </nav>
   
   <article>
     <h2 id="vesture">1. Vēsture</h2>
-    <p>Rīgas Valsts 1. ģimnāzija (RV1Ģ) ir viena no vecākajām skolām Latvijā, piedāvājot padziļinātu matemātikas un valodu apguvi. Skola ir starptautiskās izglītības programmas dalībniece.</p>
-    <p>Skolas pirmsākumi meklējami 1211. gadā, kad bīskaps Alberts izveidoja pirmo izglītības iestādi pie Svētās Marijas katedrāles.</p>
+    <p>Rīgas Valsts 1. ģimnāzija (RV1Ģ) ir vecākā skola Rīgā, kas specializējas matemātikas un valodu padziļinātā apgūšanā. Skola piedalās Starptautiskā bakalaurāta programmā un tās absolventu biedrība finansiāli atbalsta skolu.</p>
+    <p>Skolas vēsture sākas 1211. gadā, kad bīskaps Alberts dibināja Svētās Marijas katedrāli un pie tās Livonijas domkapitula klosteri. 1239. gada dokumentos minēts pirmais zināmais skolas vadītājs — kanoniķis Heinrihs.</p>
 
-    <h2 id="nosaukumi">2. Skolas nosaukumu maiņas</h2>
+    <h2 id="nosaukumu-maina">2. Skolas nosaukumu maiņas</h2>
     <ul>
-      <li>1211—1528: Klostera skola</li>
-      <li>1528—1631: Rīgas Domskola</li>
-      <li>1631—1710: Akadēmiskā ģimnāzija</li>
+      <li>1211—1528: Domkapitula klostera skola</li>
+      <li>1528—1631: Rīgas pilsētas Domskola</li>
+      <li>1631—1710: Rīgas Akadēmiskā ģimnāzija</li>
       <li>1711—1804: Rīgas Domskola</li>
+      <li>1804—1860: Rīgas 1. apriņķa skola</li>
+      <li>1861—1873: Rīgas Reālģimnāzija</li>
+      <li>1873—1894: Rīgas Pilsētas ģimnāzija</li>
+      <li>1894—1895: 8 klašu klasiskā ģimnāzija</li>
       <li>1896—1919: Valsts ģimnāzija</li>
+      <li>1919—1920: 1. vidusskola</li>
+      <li>1920—1940: Rīgas pilsētas 1. ģimnāzija</li>
+      <li>1940—1944: Rīgas 1. vidusskola</li>
+      <li>1944—1990: Rīgas L. Paegles 1. vidusskola</li>
+      <li>1990—1996: Rīgas 1. ģimnāzija</li>
       <li>1996—pašlaik: Rīgas Valsts 1. ģimnāzija</li>
     </ul>
 
-    <h2 id="vaditaji">3. Zināmie vadītāji (1229—1804)</h2>
+    <h2 id="vaditaji">3. Zināmie skolas vadītāji (1229—1804)</h2>
     <table border="1" width="100%">
       <tr>
-        <th>Gads</th>
+        <th>Laiks</th>
         <th>Vadītājs</th>
       </tr>
       <tr>
@@ -149,8 +137,16 @@ img:hover {
         <td>Retgers Pistorijs</td>
       </tr>
       <tr>
+        <td>1554—1561</td>
+        <td>Hermanis Vilkens</td>
+      </tr>
+      <tr>
         <td>1579—1589</td>
         <td>Heinrihs Mellers</td>
+      </tr>
+      <tr>
+        <td>1669—1681</td>
+        <td>Georgs Lauterbahs</td>
       </tr>
       <tr>
         <td>1755—1765</td>
@@ -167,10 +163,11 @@ img:hover {
     </table>
     
     <h2 id="absolventi">4. Skolas absolventi</h2>
-    <p>Starp skolas absolventiem ir daudzi ievērojami Latvijas zinātnieki un mākslinieki, piemēram, Nobela prēmijas laureāts Vilhelms Ostvalds.</p>
-    <p>Rainis (Jānis Pliekšāns) bija ievērojams latviešu dzejnieks un politiķis. Viņš studēja jurisprudenci un aktīvi piedalījās literatūras attīstībā.</p>
+    <p>Skolas absolventu vidū ir ievērojami Latvijas zinātnieki, mākslinieki un politiķi, piemēram, Vilhelms Ostvalds un Jānis Pliekšāns.</p>
+    <p>Rainis (īstajā vārdā Jānis Pliekšāns) bija ievērojams latviešu dzejnieks, dramaturgs un politiķis, kurš dzimis 1865. gada 11. septembrī Dunavas pagasta "Varslavānos". Viņš studēja jurisprudenci Pēterburgas Universitātē un vēlāk darbojās kā advokāts, žurnālists un redaktors. Rainis ir pazīstams ar tādiem darbiem kā "Uguns un nakts" un "Indulis un Ārija". Viņa literārais mantojums un sabiedriskā darbība būtiski ietekmēja latviešu kultūras un nacionālās identitātes veidošanos.</p>
 
-    <p>Vairāk informācijas: <a href="https://www.letonika.lv/literatura/Section.aspx?id=2189826" target="_blank">Letonika.lv</a>.</p>
+<p>Papildu informāciju par Raini var atrast vietnē <a href="https://www.letonika.lv/literatura/Section.aspx?id=2189826" target="_blank">Letonika.lv</a>.</p>
+
   </article>
 </section>
 
