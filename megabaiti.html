@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informācijas daudzuma mērvienības</title>
+    <style>
+        body {
+            background-image: url('cipari.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+        }
+        .container {
+            background-color: yellow;
+            padding: 15px;
+            width: 400px;
+        }
+        input {
+            width: 80px;
+            font-size: 18px;
+            text-align: center;
+        }
+        button {
+            display: block;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1><strong>Informācijas daudzuma mērvienības</strong></h1>
+    <div class="container">
+        <input type="text" id="gb" value="2"> GB =<br>
+        <button onclick="izteikt('mb')">Izteikt megabaitos</button>
+        <input type="text" id="mb" readonly> MB<br>
+        <button onclick="izteikt('mib')">Izteikt mibibaitos</button>
+        <input type="text" id="mib" readonly> MiB
+    </div>
+    <script>
+        function izteikt(tips) {
+            let gb = parseFloat(document.getElementById("gb").value);
+            if (tips === 'mb') {
+                document.getElementById("mb").value = gb * 1000;
+            } else if (tips === 'mib') {
+                document.getElementById("mib").value = gb * 1024;
+            }
+        }
+    </script>
+</body>
+</html>
