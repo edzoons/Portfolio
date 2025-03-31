@@ -28,6 +28,20 @@
             today.setDate(today.getDate() + days);
             document.getElementById("dateResult").value = today.toISOString().split('T')[0];
         }
+        function showPrice() {
+            let drinks = {
+                "Kafija": 2,
+                "Tēja": 1.5,
+                "Sula": 3,
+                "Ūdens": 1
+            };
+            let selectedDrink = document.querySelector('input[name="drink"]:checked');
+            if (selectedDrink) {
+                document.getElementById("drinkPrice").value = drinks[selectedDrink.value] + "€";
+            } else {
+                document.getElementById("drinkPrice").value = "";
+            }
+        }
     </script>
 </head>
 <body>
@@ -44,10 +58,12 @@
     
     <h2>Dzērienu izvēle</h2>
     <form>
-        <label><input type="radio" name="drink" value="Kafija"> Kafija - 2€</label><br>
-        <label><input type="radio" name="drink" value="Tēja"> Tēja - 1.5€</label><br>
-        <label><input type="radio" name="drink" value="Sula"> Sula - 3€</label><br>
-        <label><input type="radio" name="drink" value="Ūdens"> Ūdens - 1€</label><br>
+        <label><input type="radio" name="drink" value="Kafija"> Kafija</label><br>
+        <label><input type="radio" name="drink" value="Tēja"> Tēja</label><br>
+        <label><input type="radio" name="drink" value="Sula"> Sula</label><br>
+        <label><input type="radio" name="drink" value="Ūdens"> Ūdens</label><br>
+        <button type="button" onclick="showPrice()">Parādīt cenu</button>
+        <input type="text" id="drinkPrice" readonly>
     </form>
     
     <h2>Datuma aprēķins</h2>
