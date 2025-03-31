@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izvēlies vairākus dzērienus</title>
+    <script>
+        function calculateTotal() {
+            let drinks = {
+                "Kafija": 2,
+                "Tēja": 1.5,
+                "Sula": 3,
+                "Ūdens": 1
+            };
+            let total = 0;
+            document.querySelectorAll('input[name="drink"]:checked').forEach((item) => {
+                total += drinks[item.value];
+            });
+            document.getElementById("totalPrice").value = total + "€";
+        }
+    </script>
+</head>
+<body>
+    <h2>Izvēlies vairākus dzērienus</h2>
+    <form>
+        <label><input type="checkbox" name="drink" value="Kafija"> Kafija - 2€</label><br>
+        <label><input type="checkbox" name="drink" value="Tēja"> Tēja - 1.5€</label><br>
+        <label><input type="checkbox" name="drink" value="Sula"> Sula - 3€</label><br>
+        <label><input type="checkbox" name="drink" value="Ūdens"> Ūdens - 1€</label><br>
+        <button type="button" onclick="calculateTotal()">Aprēķināt kopējo cenu</button>
+        <input type="text" id="totalPrice" readonly>
+    </form>
+</body>
+</html>
