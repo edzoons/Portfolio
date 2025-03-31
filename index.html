@@ -59,6 +59,14 @@
             font-size: 20px;
             border-radius: 10px;
         }
+        .arrow-link {
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: url('arrow.png') no-repeat center center;
+            background-size: contain;
+            margin: 20px auto;
+        }
         .video-container {
             display: flex;
             justify-content: center;
@@ -83,12 +91,12 @@
         <a href="#video">Video</a>
         <a href="#content">Word/Excel</a>
 		<a href="atsauksmes.html">Atsauksmes</a>
-	    <a href="skolas.html">Skola</a>
-	    <a href="forma.html">Esi formā?</a>
-	    <a href="aprekini.html">Nodzīvots</a>
-	    <a href="megabaiti.html">Pārveidotājs</a>
-	     <a href="Iekapāt.html">Iekapāt?</a>
-	     <a href="Iekapātdaudz.html">Iekapāt vairāk?</a>
+		<a href="skolas.html">Skola</a>
+		<a href="forma.html">Esi formā?</a>
+		<a href="aprekini.html">Nodzīvots</a>
+		<a href="megabaiti.html">Pārveidotājs</a>
+		<a href="Iekapāt.html">Iekapāt?</a>
+		<a href="Iekapātdaudz.html">Iekapāt vairāk?</a>
     </div>
 
     <div class="segment" id="home">
@@ -105,13 +113,14 @@
     <div class="segment" id="GIMP">
         <h2>GIMP</h2>
         <p>Es iemācījos ar GIMP rediģēt bildes, pielietot dažādus efektus kā arī veidot nelielas animācijas</p>
-        <div class="image-placeholder">Šeit būs bilde</div>
+        <img src="gimp.jpg" alt="GIMP attēls" style="width:100%; border-radius: 10px;">
+        <img src="luksofors.gif" alt="GIF ar luksoforu" style="width:100%; border-radius: 10px;">
     </div>
 
     <div class="segment" id="project">
         <h2>Grupu projekts</h2>
         <p>Grupas projekts ar 3D modelēšanu, lika apgūt dažādas zināšanas, kā arī prasmes. Iemācījos uzdizainēt savu logo, pārveidot to 3d formātā un beigās to izprintēt puzles gabalos.</p>
-        <div class="image-placeholder">Šeit būs bilde</div>
+        <img src="LOGO.jpg" alt="Grupu projekta logo" style="width:100%; border-radius: 10px;">
     </div>
 
     <div class="segment" id="video">
@@ -130,6 +139,8 @@
         <div class="image-placeholder">Šeit būs bilde</div>
     </div>
 
+    <a href="joks.html" class="arrow-link"></a>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let segments = document.querySelectorAll(".segment");
@@ -147,4 +158,5 @@
     </script>
 </body>
 </html>
+
 
