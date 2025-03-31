@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tīmekļa Formas</title>
+    <title>Pamata formas</title>
     <script>
         function calculate(operation) {
             let num1 = parseFloat(document.getElementById("num1").value) || 0;
@@ -12,7 +12,7 @@
             switch (operation) {
                 case 'add': result = num1 + num2; break;
                 case 'subtract': result = num1 - num2; break;
-                case 'divide': result = num1 / num2; break;
+                case 'divide': result = num2 !== 0 ? num1 / num2 : 'Nedrīkst dalīt ar 0'; break;
                 default: result = 0;
             }
             document.getElementById("result").value = result;
@@ -28,24 +28,10 @@
             today.setDate(today.getDate() + days);
             document.getElementById("dateResult").value = today.toISOString().split('T')[0];
         }
-        function showPrice() {
-            let drinks = {
-                "Kafija": 2,
-                "Tēja": 1.5,
-                "Sula": 3,
-                "Ūdens": 1
-            };
-            let selectedDrink = document.querySelector('input[name="drink"]:checked');
-            if (selectedDrink) {
-                document.getElementById("drinkPrice").value = drinks[selectedDrink.value] + "€";
-            } else {
-                document.getElementById("drinkPrice").value = "";
-            }
-        }
     </script>
 </head>
 <body>
-    <h2>Forma ar matemātiskām darbībām</h2>
+    <h2>Matemātiskās darbības</h2>
     <form>
         <input type="number" id="num1" placeholder="1. skaitlis">
         <input type="number" id="num2" placeholder="2. skaitlis">
@@ -56,16 +42,6 @@
         <input type="text" id="result" readonly>
     </form>
     
-    <h2>Dzērienu izvēle</h2>
-    <form>
-        <label><input type="radio" name="drink" value="Kafija"> Kafija</label><br>
-        <label><input type="radio" name="drink" value="Tēja"> Tēja</label><br>
-        <label><input type="radio" name="drink" value="Sula"> Sula</label><br>
-        <label><input type="radio" name="drink" value="Ūdens"> Ūdens</label><br>
-        <button type="button" onclick="showPrice()">Parādīt cenu</button>
-        <input type="text" id="drinkPrice" readonly>
-    </form>
-    
     <h2>Datuma aprēķins</h2>
     <form>
         <input type="number" id="days" placeholder="Dienu skaits">
@@ -74,3 +50,4 @@
     </form>
 </body>
 </html>
+
