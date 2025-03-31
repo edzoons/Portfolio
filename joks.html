@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ko tu te meklē?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1a1a1a;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        .video-container {
+            margin: 20px 0;
+        }
+        .arrow-link {
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: url('arrow.png') no-repeat center center;
+            background-size: contain;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ko tu te meklē?</h1>
+    <div class="video-container">
+        <video controls>
+            <source src="reklama.mp4" type="video/mp4">
+            Jūsu pārlūkprogramma neatbalsta video atskaņošanu.
+        </video>
+    </div>
+    <a href="index.html" class="arrow-link"></a>
+</body>
+</html>
