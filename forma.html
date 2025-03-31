@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tīmekļa Formas</title>
+    <script>
+        function calculate(operation) {
+            let num1 = parseFloat(document.getElementById("num1").value) || 0;
+            let num2 = parseFloat(document.getElementById("num2").value) || 0;
+            let result;
+            switch (operation) {
+                case 'add': result = num1 + num2; break;
+                case 'subtract': result = num1 - num2; break;
+                case 'divide': result = num1 / num2; break;
+                default: result = 0;
+            }
+            document.getElementById("result").value = result;
+        }
+        function resetFields() {
+            document.getElementById("num1").value = "";
+            document.getElementById("num2").value = "";
+            document.getElementById("result").value = "";
+        }
+        function updateDate() {
+            let days = parseInt(document.getElementById("days").value) || 0;
+            let today = new Date();
+            today.setDate(today.getDate() + days);
+            document.getElementById("dateResult").value = today.toISOString().split('T')[0];
+        }
+    </script>
+</head>
+<body>
+    <h2>Forma ar matemātiskām darbībām</h2>
+    <form>
+        <input type="number" id="num1" placeholder="1. skaitlis">
+        <input type="number" id="num2" placeholder="2. skaitlis">
+        <button type="button" onclick="calculate('add')">Saskaitīt</button>
+        <button type="button" onclick="calculate('subtract')">Atņemt</button>
+        <button type="button" onclick="calculate('divide')">Dalīt</button>
+        <button type="button" onclick="resetFields()">Reset</button>
+        <input type="text" id="result" readonly>
+    </form>
+    
+    <h2>Dzērienu izvēle</h2>
+    <form>
+        <label><input type="radio" name="drink" value="Kafija"> Kafija - 2€</label><br>
+        <label><input type="radio" name="drink" value="Tēja"> Tēja - 1.5€</label><br>
+        <label><input type="radio" name="drink" value="Sula"> Sula - 3€</label><br>
+        <label><input type="radio" name="drink" value="Ūdens"> Ūdens - 1€</label><br>
+    </form>
+    
+    <h2>Datuma aprēķins</h2>
+    <form>
+        <input type="number" id="days" placeholder="Dienu skaits">
+        <button type="button" onclick="updateDate()">Aprēķināt datumu</button>
+        <input type="text" id="dateResult" readonly>
+    </form>
+</body>
+</html>
